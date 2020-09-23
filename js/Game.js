@@ -20,4 +20,11 @@ class Game {
         ];
         return phrases;
     }
+
+   getRandomPhrase() {
+       const randomNumber = Math.floor(Math.random()*this.phrases.length);
+       return this.phrases[randomNumber];
+   };
+
+
 }
