@@ -27,4 +27,13 @@ class Game {
    };
 
 
+   startGame() {
+        const startScreen = document.querySelector("#overlay");
+        startScreen.style.display = "none";
+        const phrs = this.getRandomPhrase();
+        const phrase = new Phrase(phrs.phrase);
+
+        phrase.addPhraseToDisplay();
+        this.activePhrase = phrase;
+   }
 }
