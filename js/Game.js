@@ -10,4 +10,14 @@ class Game {
         this.activePhrase = "null";
     }
 
+    createPhrases() {
+        const phrases = [
+            {phrase: "Cheeseburger"},
+            {phrase: "Hot Dog"},
+            {phrase: "Steak"},
+            {phrase: "Chicken"},
+            {phrase: "French Fries"},
+        ];
+        return phrases;
+    }
 }
