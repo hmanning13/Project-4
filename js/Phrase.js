@@ -19,6 +19,6 @@
                 ${this.phrase[i]}</li>`;
             }
         }
-        ul.append(html);
+        ul.innerHTML;
     }; 
  }
