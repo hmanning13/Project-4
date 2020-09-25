@@ -28,10 +28,9 @@ class Game {
 
 
    startGame() {
-        const startScreen = document.querySelector("#overlay");
+        const startScreen = document.getElementById("overlay");
         startScreen.style.display = "none";
-        const phrs = this.getRandomPhrase();
-        const phrase = new Phrase(phrs.phrase);
+        const phrase = new Phrase(this.getRandomPhrase().phrase);
 
         phrase.addPhraseToDisplay();
         this.activePhrase = phrase;
