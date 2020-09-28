@@ -15,8 +15,7 @@
             if (this.phrase[i] === " ") {
                 html += `<li class = "space"> </li>`;
             } else {
-                html += `<li class = "hide letter ${this.phrase[i]}">
-                ${this.phrase[i]}</li>`;
+                html += `<li class = "hide letter ${this.phrase[i]}">${this.phrase[i]}</li>`;
             }
         }
         ul.innerHTML = html;
@@ -36,11 +35,11 @@
         const showLetter = document.querySelectorAll(".letter");
 
         for (let i = 0; i < showLetter.length; i ++) {
-            if (letter === showLetter[i].textContent) {
-               // showLetter[i].classList.remove("hide");
-               // showLetter[i].classList.add("show");
-               
-            }
+            if (this.phrase[i].includes(letter)) {
+               showLetter[i].classList.remove("hide");
+               showLetter[i].classList.add("show");
+            } 
+            
         }
     }
  }
