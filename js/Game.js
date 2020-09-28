@@ -56,5 +56,7 @@ class Game {
         }
    };
 
-
+   gameOver(gameWon) {
+       
+   };
 }
