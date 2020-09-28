@@ -31,14 +31,15 @@
     };
 
 
-    //Still working check back later
+    //Still working 
     showMatchedLetter(letter) {
         const showLetter = document.querySelectorAll(".letter");
 
         for (let i = 0; i < showLetter.length; i ++) {
-            if (showLetter[i].innerHTML === letter) {
-                showLetter[i].classList.add("show");
-                showLetter[i].classList.remove("hide");
+            if (letter === showLetter[i].textContent) {
+               // showLetter[i].classList.remove("hide");
+               // showLetter[i].classList.add("show");
+               
             }
         }
     }
