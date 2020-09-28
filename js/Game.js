@@ -57,6 +57,18 @@ class Game {
    };
 
    gameOver(gameWon) {
-       
+       const startScreen = document.getElementById("overlay");
+       const endMessage = document.getElementById("game-over-message");
+       startScreen.style.display = "";
+
+       if(gameWon) {
+           endMessage.textContent = "Congrats, you are a winner!"
+           startScreen.className = "win";
+           //this.resetGame();
+       } else {
+           endMessage.textContent = "Sorry, better luck next time!";
+           startScreen.className = "lose";
+           //this.resetGame();
+       }
    };
 }
