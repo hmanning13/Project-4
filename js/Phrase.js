@@ -32,9 +32,9 @@
 
     //Works when no spaces 
     showMatchedLetter(letter) {
-        const showLetter = document.querySelectorAll(".letter");
+        const showLetter = document.getElementsByTagName("li");
         for (let i = 0; i < showLetter.length; i ++) {
-            if (this.phrase[i].includes(letter)) {
+            if (showLetter[i].textContent == letter) {
                showLetter[i].classList.add("show"); 
                showLetter[i].classList.remove("hide");
             } 
