@@ -47,4 +47,14 @@ class Game {
        }
    };
 
+   removeLife() {
+        this.missed += 1;
+        const lives = document.querySelector("img[src='images/liveHeart.png']");
+        lives.setAttribute("src", "images/lostHeart.png");
+        if(this.missed === 5) {
+            this.gameOver();
+        }
+   };
+
+
 }
