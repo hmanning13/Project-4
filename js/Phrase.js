@@ -21,4 +21,25 @@
         }
         ul.innerHTML = html;
     }; 
+
+    checkLetter(letter) {
+        if (this.phrase.includes(letter)) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+
+    //Still working check back later
+    showMatchedLetter(letter) {
+        const showLetter = document.querySelectorAll(".letter");
+
+        for (let i = 0; i < showLetter.length; i ++) {
+            if (showLetter[i].innerHTML === letter) {
+                showLetter[i].classList.add("show");
+                showLetter[i].classList.remove("hide");
+            }
+        }
+    }
  }
