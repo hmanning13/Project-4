@@ -35,4 +35,8 @@ class Game {
         phrase.addPhraseToDisplay();
         this.activePhrase = phrase;
    }
+
+   checkForWin() {
+
+   };
 }
