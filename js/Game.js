@@ -37,6 +37,14 @@ class Game {
    }
 
    checkForWin() {
+       let hiddenLetter = document.getElementsByClassName("hide");
+       //let shownLetter = document.getElementsByClassName("show");
 
+       if(hiddenLetter.length === 0) {
+           return true;
+       } else {
+           return false;
+       }
    };
+
 }
