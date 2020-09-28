@@ -30,14 +30,13 @@
     };
 
 
-    //Still working 
+    //Works when no spaces 
     showMatchedLetter(letter) {
         const showLetter = document.querySelectorAll(".letter");
-
         for (let i = 0; i < showLetter.length; i ++) {
             if (this.phrase[i].includes(letter)) {
+               showLetter[i].classList.add("show"); 
                showLetter[i].classList.remove("hide");
-               showLetter[i].classList.add("show");
             } 
             
         }
