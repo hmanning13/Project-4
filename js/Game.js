@@ -38,7 +38,6 @@ class Game {
 
    checkForWin() {
        let hiddenLetter = document.getElementsByClassName("hide");
-       //let shownLetter = document.getElementsByClassName("show");
 
        if(hiddenLetter.length === 0) {
            return true;
@@ -71,4 +70,36 @@ class Game {
            //this.resetGame();
        }
    };
-}
+
+   handleInteraction(button) {
+    if (this.activePhrase.checkLetter(button.innerHTML)) {
+        button.classList.add("chosen");
+        this.activePhrase.showMatchedLetter(button.innerHTML);
+
+        this.checkForWin();
+        if (this.checkForWin() === true) {
+            this.gameOver(true);
+            
+        }
+    } else {
+       button.classList.add("wrong");
+       this.removeLife();
+       button.disabled = true;
+    }
+    };
+
+    gameReset() {
+        const clearUl = document.querySelector("ul");
+        clearUl.innerHTML = "";
+
+        const clearButtons = document.getElementById("qwerty");
+        for (let i = 0; i < clearButtons.length; i++) {
+            clearButtons[i].className = "key";
+            clearButtons[i].removeAttribute("disabled");
+        }
+        const clearLives = document.querySelectorAll("#scoreboard li");
+        for (let i = 0; i < clearLives.length; i++) {
+            clearLives[i].src = "images/liveHeart.png";
+        }
+    }
+};
