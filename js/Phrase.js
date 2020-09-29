@@ -30,7 +30,7 @@
     };
 
 
-    //Works when no spaces 
+    
     showMatchedLetter(letter) {
         const showLetter = document.getElementsByTagName("li");
         for (let i = 0; i < showLetter.length; i ++) {
