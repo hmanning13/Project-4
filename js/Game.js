@@ -88,18 +88,19 @@ class Game {
     }
     };
 
-    gameReset() {
+    resetGame() {
         const clearUl = document.querySelector("ul");
         clearUl.innerHTML = "";
 
         const clearButtons = document.getElementById("qwerty");
         for (let i = 0; i < clearButtons.length; i++) {
-            clearButtons[i].className = "key";
-            clearButtons[i].removeAttribute("disabled");
+            clearButtons[i].classList = "key";
+            clearButtons[i].disabled = false;
+
         }
-        const clearLives = document.querySelectorAll("#scoreboard li");
+        const clearLives = document.getElementById("scoreboard");
         for (let i = 0; i < clearLives.length; i++) {
-            clearLives[i].src = "images/liveHeart.png";
+            clearLives[i].setAttribute("src", "images/liveHeart.png");
         }
-    }
-};
+    };
+}
