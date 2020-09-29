@@ -63,11 +63,11 @@ class Game {
        if(gameWon) {
            endMessage.textContent = "Congrats, you are a winner!"
            startScreen.className = "win";
-           //this.resetGame();
+           this.resetGame();
        } else {
            endMessage.textContent = "Sorry, better luck next time!";
            startScreen.className = "lose";
-           //this.resetGame();
+           this.resetGame();
        }
    };
 
@@ -92,15 +92,17 @@ class Game {
         const clearUl = document.querySelector("ul");
         clearUl.innerHTML = "";
 
-        const keys = document.getElementById("qwerty");
+        const keys = document.getElementById("qwerty"); 
         for (let i = 0; i < keys.length; i++) {
             keys[i].classList = "key";
-            keys[i].disabled = false;
+            keys[i].disabled = true;
+        }
 
-        }
-        const clearLives = document.getElementById("scoreboard");
+        const clearLives = document.querySelector("img[src='images/liveHeart.png']");
         for (let i = 0; i < clearLives.length; i++) {
-            clearLives[i].setAttribute("src", "images/liveHeart.png");
+            clearLives[i].setAttribute("src", "images/liveHeart.png")
         }
+        
     };
+    
 }
