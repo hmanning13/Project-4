@@ -92,10 +92,10 @@ class Game {
         const clearUl = document.querySelector("ul");
         clearUl.innerHTML = "";
 
-        const clearButtons = document.getElementById("qwerty");
-        for (let i = 0; i < clearButtons.length; i++) {
-            clearButtons[i].classList = "key";
-            clearButtons[i].disabled = false;
+        const keys = document.getElementById("qwerty");
+        for (let i = 0; i < keys.length; i++) {
+            keys[i].classList = "key";
+            keys[i].disabled = false;
 
         }
         const clearLives = document.getElementById("scoreboard");
