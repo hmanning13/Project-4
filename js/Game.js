@@ -63,10 +63,12 @@ class Game {
        if(gameWon) {
            endMessage.textContent = "Congrats, you are a winner!"
            startScreen.className = "win";
+           startBttn.textContent = "Play again?"
            this.resetGame();
        } else {
            endMessage.textContent = "Sorry, better luck next time!";
            startScreen.className = "lose";
+           startBttn.textContent = "Play again?"
            this.resetGame();
        }
    };
