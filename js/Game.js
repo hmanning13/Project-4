@@ -92,13 +92,13 @@ class Game {
         const clearUl = document.querySelector("ul");
         clearUl.innerHTML = "";
 
-        const keys = document.getElementById("qwerty"); 
+        const keys = document.querySelectorAll(".key"); 
         for (let i = 0; i < keys.length; i++) {
             keys[i].classList = "key";
-            keys[i].disabled = true;
+            keys[i].disabled = false;
         }
 
-        const clearLives = document.querySelector("img[src='images/liveHeart.png']");
+        const clearLives = document.querySelectorAll(".tries img");
         for (let i = 0; i < clearLives.length; i++) {
             clearLives[i].setAttribute("src", "images/liveHeart.png")
         }
