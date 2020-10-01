@@ -105,7 +105,7 @@ class Game {
     } else {
        button.classList.add("wrong");
        this.removeLife();
-       button.disabled = true;
+       button.disabled = false;
     }
     };
 
